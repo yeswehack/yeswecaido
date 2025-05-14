@@ -1,0 +1,15 @@
+{
+  "name": "@yeswecaido/backend",
+  "version": "0.0.0",
+  "type": "module",
+  "types": "src/index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test-program": "tsx tests/test.ts"
+  },
+  "devDependencies": {
+    "@caido/sdk-backend": "^0.47.1",
+    "@yeswecaido/common": "workspace:*",
+    "zod": "^3.24.2"
+  }
+}
