@@ -16,7 +16,7 @@ export default defineConfig({
   version: "1.0.0",
   author: {
     name: "yeswehack",
-    email: "",
+    email: "support@yeswehack.com",
     url: "https://www.yeswehack.com/",
   },
   plugins: [
