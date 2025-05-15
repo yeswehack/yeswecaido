@@ -30,7 +30,7 @@ const emit = defineEmits<{
 <style scoped>
 .slideIn-enter-active,
 .slideIn-leave-active {
-  transition: transform 0.3s;
+  transition: transform 0.2s;
 }
 
 .slideIn-enter-from,
@@ -39,6 +39,6 @@ const emit = defineEmits<{
 }
 
 .backdrop.show {
-  @apply fixed inset-0 bg-black/50 backdrop-blur-sm;
+  @apply fixed inset-0 bg-black/60;
 }
 </style>
