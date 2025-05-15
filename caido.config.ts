@@ -11,7 +11,7 @@ import prefixwrap from "postcss-prefixwrap";
 const id = "yeswecaido";
 export default defineConfig({
   id,
-  name: "yeswecaido",
+  name: "YesWeCaido",
   description: "Interact with YesWeHack's API to fetch your bug bounty programs.",
   version: "1.0.0",
   author: {
