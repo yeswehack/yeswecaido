@@ -11,8 +11,10 @@ YesWeCaido is a Caido plugin that allows you to fetch all bug bounty programs on
   <a href="#features">Features</a> |
   <a href="#installation">Installation</a> |
   <a href="#usage">Usage</a>
+  <a href="#setup">Usage</a>
 </p>
 
+<img src="assets/yeswecaido.png" alt="preview" width="auto">
 
 ## Features
 
@@ -34,6 +36,16 @@ You can install YesWeCaido either by Caido's community store or manually.
 2. Download the latest `plugin_package.zip`
 3. In Caido, go to the `Plugins` page
 4. Click 'Install Package' and select your downloaded `plugin_package.zip` file
+
+## Setup
+
+You can fetch all public programs directly to Caido. However, **if you want to fetch your private invites you need to add the JWT to YesWeBurp**. You can get the JWT when you have [logged in to YesWeHack](https://yeswehack.com/auth/login), then open the browser developer console. When you have the JWT value, inside YesWeCaido, insert the JWT value in the input field located at the top right.
+
+### Firefox
+Developer console → Storage → Local Storage → https://yeswehack.com/ → access_token → Copy value (JWT)
+
+### Chrome / Chromium
+Developer console → Application → Local Storage → https://yeswehack.com/ → access_token → Copy value (JWT)
 
 ## Usage
 1. In Caido, click on `YesWeCaido` located on the left side panel
