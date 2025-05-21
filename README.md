@@ -54,4 +54,4 @@ Developer console → Application → Local Storage → https://yeswehack.com/ �
 4. In the new side window that gives all the program details, add the scope and User-Agent (if present)
 5. You can confirm that the scope and User-Agent have been added by navigating to the Caido's `Scopes` and `Match & Replace` page
 
-<img src="assets/yeswecaido.gif" alt="usage-gif">
+<img src="assets/yeswecaido_usage.gif" alt="usage-gif">
