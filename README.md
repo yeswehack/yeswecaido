@@ -1,18 +1,16 @@
-# YesWeCaido
-
-YesWeCaido is a Caido plugin that allows you to fetch all bug bounty programs on YesWeHack with all their details to your Caido instance.
-
 <h1 align="center">
-  <img src="assets/yeswecaido_logo.png" alt="logo" width="220px">
+  <img src="assets/yeswecaido_logo.png" alt="logo" width="320px">
   <br>
 </h1>
  
 <p align="center">
-  <a href="#features">Features</a> |
-  <a href="#installation">Installation</a> |
-  <a href="#usage">Usage</a>
+  <a href="#features">Features</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#usage">Usage</a> •
   <a href="#setup">Usage</a>
 </p>
+
+YesWeCaido is a Caido plugin that allows you to fetch all bug bounty programs on YesWeHack with all their details to your Caido instance.
 
 <img src="assets/yeswecaido.png" alt="preview" width="auto">
 
