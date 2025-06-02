@@ -37,7 +37,7 @@ You can install YesWeCaido either by Caido's community store or manually.
 
 ## Setup
 
-You can fetch all public programs directly to Caido. However, **if you want to fetch your private invites you need to add the JWT to YesWeBurp**. You can get the JWT when you have [logged in to YesWeHack](https://yeswehack.com/auth/login), then open the browser developer console. When you have the JWT value, inside YesWeCaido, insert the JWT value in the input field located at the top right.
+You can fetch all public programs directly to Caido. However, **if you want to fetch your private invites you need to add the JWT to YesWeCaido**. You can get the JWT when you have [logged in to YesWeHack](https://yeswehack.com/auth/login), then open the browser developer console. When you have the JWT value, inside YesWeCaido, insert the JWT value in the input field located at the top right.
 
 ### Firefox
 Developer console → Storage → Local Storage → https://yeswehack.com/ → access_token → Copy value (JWT)
