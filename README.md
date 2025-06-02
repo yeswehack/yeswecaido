@@ -6,8 +6,8 @@
 <p align="center">
   <a href="#features">Features</a> •
   <a href="#installation">Installation</a> •
-  <a href="#usage">Usage</a> •
-  <a href="#setup">Usage</a>
+  <a href="#setup">Setup</a> •
+  <a href="#usage">Usage</a>
 </p>
 
 YesWeCaido is a Caido plugin that allows you to fetch all bug bounty programs on YesWeHack with all their details to your Caido instance.
