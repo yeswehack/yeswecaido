@@ -2,7 +2,7 @@
   <div class="backdrop" :class="{ show }" @click="emit('close')" />
   <Transition name="slideIn">
     <div
-      class="absolute top-[50px] shadow-lg shadow-black/20 border-surface-500 border-l right-0 w-[60%] bottom-0 bg-surface-800 "
+      class="absolute bottom-[35px] top-[50px] shadow-lg shadow-black/20 border-surface-500 border-l right-0 w-[60%] bg-surface-800 "
       :class="show ? `block` : 'hidden'"
       position="right"
       v-if="show"
