@@ -16,9 +16,9 @@ type BackendEvents = DefineEvents<{
 }>;
 
 export const businessUnitParser = z.object({
-  name: z.string(),
-  slug: z.string(),
-  description: z.string(),
+  name: z.string().catch(""),
+  slug: z.string().catch(""),
+  description: z.string().catch(""),
   currency: z.enum(["EUR", "USD"]),
 });
 
@@ -52,43 +52,43 @@ export const rewardGridParser = z
 
 export const shortProgramParser = z.object({
   _isFull: z.literal(false).catch(false),
-  title: z.string(),
-  slug: z.string(),
+  title: z.string().catch(""),
+  slug: z.string().catch(""),
   type: z.enum(["bug-bounty", "vdp-in-app"]),
   bounty: z.boolean().catch(false),
   bounty_reward_min: z.number().catch(0),
   bounty_reward_max: z.number().catch(0),
   public: z.boolean().catch(true),
-  business_unit: businessUnitParser,
-  thumbnail: assetParser,
-  scopes_count: z.number(),
+  business_unit: businessUnitParser.nullable(),
+  thumbnail: assetParser.nullable(),
+  scopes_count: z.number().catch(0),
 });
 
 export const scopeParser = z.object({
-  scope: z.string(),
-  scope_type: z.string(),
+  scope: z.string().catch(""),
+  scope_type: z.string().catch(""),
   asset_value: z.enum(["LOW", "MEDIUM", "HIGH", "CRITICAL"]),
 });
 
 export const programParser = shortProgramParser.extend({
   _isFull: z.literal(true).catch(true),
-  rules: z.string(),
-  rules_html: z.string(),
+  rules: z.string().catch(""),
+  rules_html: z.string().catch(""),
   user_agent: z.string().catch(""),
   account_access: z.string().catch(""),
   account_access_html: z.string().catch(""),
   qualifying_vulnerability: z.array(z.string()).catch(() => []),
   non_qualifying_vulnerability: z.array(z.string()).catch(() => []),
   out_of_scope: z.array(z.string()).catch(() => []),
-  scopes: z.array(scopeParser),
-  reward_grid_default: rewardGridParser,
-  reward_grid_very_low: rewardGridParser,
-  reward_grid_low: rewardGridParser,
-  reward_grid_medium: rewardGridParser,
-  reward_grid_high: rewardGridParser,
-  reward_grid_critical: rewardGridParser,
-  stats: statsParser,
-  banner: assetParser.optional(),
+  scopes: z.array(scopeParser).nullable(),
+  reward_grid_default: rewardGridParser.nullable(),
+  reward_grid_very_low: rewardGridParser.nullable(),
+  reward_grid_low: rewardGridParser.nullable(),
+  reward_grid_medium: rewardGridParser.nullable(),
+  reward_grid_high: rewardGridParser.nullable(),
+  reward_grid_critical: rewardGridParser.nullable(),
+  stats: statsParser.nullable(),
+  banner: assetParser.optional().nullable(),
 });
 
 export const paginationParser = z.object({
