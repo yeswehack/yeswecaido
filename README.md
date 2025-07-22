@@ -10,7 +10,7 @@
   <a href="#usage">Usage</a>
 </p>
 
-YesWeCaido is a Caido plugin that allows you to fetch all bug bounty programs on YesWeHack with all their details to your Caido instance.
+Pwnbook-Caido is a Caido plugin that allows you to fetch all bug bounty programs on YesWeHack with all their details to your Caido instance.
 
 <img src="assets/yeswecaido.png" alt="preview" width="auto">
 
