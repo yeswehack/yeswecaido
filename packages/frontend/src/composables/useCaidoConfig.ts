@@ -38,7 +38,7 @@ export function useCaidoConfig() {
         name: programName,
         collectionId: collection?.id,
         isEnabled: true,
-        sources: ["INTERCEPT" as const, "AUTOMATE" as const],
+        sources: [],
         
         section: {
          kind: "SectionRequestHeader",
