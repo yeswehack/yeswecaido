@@ -36,8 +36,9 @@ export function useCaidoConfig() {
     try {
       await sdk.matchReplace.createRule({
         name: programName,
-        collectionId: collection?.id, // 3
+        collectionId: collection?.id,
         isEnabled: true,
+        sources: [],
         
         section: {
          kind: "SectionRequestHeader",
