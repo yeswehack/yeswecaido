@@ -53,6 +53,7 @@ export const rewardGridParser = z
 export const shortProgramParser = z.object({
   _isFull: z.literal(false).catch(false),
   title: z.string().catch(""),
+  disabled: z.boolean().catch(false),
   slug: z.string().catch(""),
   type: z.enum(["bug-bounty", "vdp-in-app"]),
   bounty: z.boolean().catch(false),

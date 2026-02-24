@@ -10,6 +10,7 @@
     <div class="flex flex-wrap gap-2 mt-2 text-sm">
       <ProgramTypeChip :program="program" />
       <ProgramVisibilityChip :program="program" />
+      <ProgramDisableChip v-if="program.disabled" :program="program" />
       <Chip :label="`${program.scopes_count ?? '?'} scopes`" />
     </div>
     <Divider />
@@ -29,6 +30,7 @@ import ProgramTypeChip from "./ProgramTypeChip.vue";
 import ProgramVisibilityChip from "./ProgramVisibilityChip.vue";
 import ProgramStats from "./ProgramStats.vue";
 import LazyThumbnail from "./LazyThumbnail.vue";
+import ProgramDisableChip from "./ProgramDisableChip.vue";
 
 const props = defineProps<{
   program: YWH.AnyProgram;

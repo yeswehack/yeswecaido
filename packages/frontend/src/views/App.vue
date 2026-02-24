@@ -2,8 +2,15 @@
   <div id="plugin--yeswecaido">
     <Toolbar class="!bg-surface-800 ml-4 relative border-none py-2 px-4">
       <template #start>
-        <img src="@/assets/logo-white.svg" alt="yeswehack logo" class="w-32 h-auto" />
-        <div class="p-4 cursor-pointer text-red-500 font-bold" @click="copyLink('https://yeswehack.com/programs/')">
+        <img
+          src="@/assets/logo-white.svg"
+          alt="yeswehack logo"
+          class="w-32 h-auto"
+        />
+        <div
+          class="p-4 cursor-pointer text-red-500 font-bold"
+          @click="copyLink('https://yeswehack.com/programs/')"
+        >
           https://yeswehack.com/programs/
         </div>
       </template>
@@ -19,6 +26,11 @@
             class="w-[400px]"
           />
         </IconField>
+
+        <div class="flex item-center m-2 gap-2">
+          <label for="switch1">Show disabled programs</label>
+          <ToggleSwitch inputId="switch1" v-model="showDisablePrograms" />
+        </div>
       </template>
 
       <template #end>
@@ -54,7 +66,10 @@
         :program="program"
       />
     </div>
-    <Sidebar :model-value="!!selectedProgram" @close="selectedProgram = undefined">
+    <Sidebar
+      :model-value="!!selectedProgram"
+      @close="selectedProgram = undefined"
+    >
       <ProgramDetails v-if="selectedProgram" :program="selectedProgram" />
     </Sidebar>
   </div>
@@ -68,6 +83,7 @@
 </style>
 
 <script lang="ts" setup>
+import ToggleSwitch from "primevue/toggleswitch";
 import ProgramDetails from "@/components/ProgramDetails.vue";
 import Sidebar from "@/components/Sidebar.vue";
 import Button from "primevue/button";
@@ -85,6 +101,8 @@ import { useSDK } from "@/plugins/sdk";
 
 const sdk = useSDK();
 
+const showDisablePrograms = ref(false);
+
 const { programs, jwt, loading, refresh } = useYwhPrograms();
 
 const selectedProgram = ref<YWH.Program>();
@@ -101,6 +119,9 @@ const filteredPrograms = computed(() => {
   const needle = searchKeyword.value.toLowerCase();
   return programs.value
     .filter((program) => {
+      if (!showDisablePrograms.value && program.disabled) {
+        return false;
+      }
       return program.slug.toLowerCase().includes(needle);
     })
     .toSorted((a, b) => {
