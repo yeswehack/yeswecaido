@@ -13,7 +13,7 @@ export default defineConfig({
   id,
   name: "YesWeCaido",
   description: "Interact with YesWeHack's API to fetch your bug bounty programs.",
-  version: "1.1.0",
+  version: "1.1.1",
   author: {
     name: "yeswehack",
     email: "support@yeswehack.com",
