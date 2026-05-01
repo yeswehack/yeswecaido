@@ -37,24 +37,23 @@ export function useCaidoConfig() {
       await sdk.matchReplace.createRule({
         name: programName,
         collectionId: collection?.id,
-        isEnabled: true,
         sources: [],
-        
+        query: "",
         section: {
-         kind: "SectionRequestHeader",
-         operation: {
+          kind: "SectionRequestHeader",
+          operation: {
             kind: "OperationHeaderRaw",
             matcher: {
               kind: "MatcherRawRegex",
-              regex: "^User-Agent:(.*?)$"
-            },
+              regex: "^User-Agent:(.*?)$",
+             },
             replacer: {
               kind: "ReplacerTerm",
-              term: `User-Agent: $1 ${user_agent_part}`
-            }
+              term: `User-Agent: $1 ${user_agent_part}`,
+             },
+          },
         },
-        query: "",
-      }});
+      });
     }
     catch (error) {
       sdk.window.showToast(`Failed to add user-agent match & replace rule, error ${error}`, {
